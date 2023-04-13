@@ -9,7 +9,7 @@ import Container from '@components/ui/Container';
 const Bdesh = () => {
     return (
         <section className="bg-primary-2 py-20">
-            <Container className="flex gap-10">
+            <Container className="flex flex-col md:flex-row gap-10">
                 <div class="col-sm-6">
                     <Text variant='pageHeading'>Bdesh Jobs, in trust and reliance</Text>
                     <div className="rounded-lg">
