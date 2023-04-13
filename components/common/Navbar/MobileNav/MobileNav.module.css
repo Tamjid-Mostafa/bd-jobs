@@ -1,5 +1,5 @@
 .root {
-@apply fixed inset-0 bg-primary backdrop-blur-lg z-[1] h-screen lg:hidden transition-all duration-300 ease-linear;
+@apply fixed inset-0 bg-primary backdrop-blur-lg z-[999] h-screen lg:hidden transition-all duration-300 ease-linear;
 }
 .header {
 @apply flex justify-between items-center p-2;

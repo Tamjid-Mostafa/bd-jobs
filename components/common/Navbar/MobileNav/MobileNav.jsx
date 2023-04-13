@@ -13,8 +13,8 @@ const MobileNav = ({ ...props }) => {
     const { dropdownmenu, navBarlinks, setIsMenuOpen, isMenuOpen } = props;
     const [open, setOpen] = useState(false)
     return (
-        <nav className={cn(s.root, isMenuOpen ? 'translate-x-0' : '-translate-x-[100%]')}>
-            <div className='flex flex-col justify-between h-full w-full'>
+        <nav className={cn(s.root, isMenuOpen ? 'translate-x-0' : '-translate-x-[100%]', "")}>
+            <div className='flex flex-col justify-between h-screen w-full'>
                 <div className={cn(s.header)}>
                     <button
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -44,7 +44,7 @@ const MobileNav = ({ ...props }) => {
                                     <span>Tamjid Mostafa</span><DropDownArrow /></button>
 
                                 {/* <!-- Dropdown menu --> */}
-                                <div id="dropdownInformation" className={cn('absolute top-14 left-10 z-10  divide-y border-[1px] rounded-b-lg shadow w-64 bg-primary transition-all duration-300', open ? 'translate-y-0' : 'translate-y-[300%]')}>
+                                <div id="dropdownInformation" className={cn('absolute top-14 left-10 z-10  divide-y border-[1px] rounded-b-lg shadow w-64 bg-primary transition-all duration-300', open ? 'translate-y-0' : 'translate-y-[-300%]')}>
 
                                     <ul className="py-2 text-sm text-gray-700">
 
