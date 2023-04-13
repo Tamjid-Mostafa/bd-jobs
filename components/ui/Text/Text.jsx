@@ -22,7 +22,7 @@ const Text = ({
     heading: 'h1',
     pageHeading: 'h1',
     sectionHeading: 'h2',
-    newsletter: 'h2',
+    label: 'h2',
     logo: 'h1',
   }
 
@@ -43,7 +43,7 @@ const Text = ({
           [s.heading]: variant === 'heading',
           [s.pageHeading]: variant === 'pageHeading',
           [s.sectionHeading]: variant === 'sectionHeading',
-          [s.newsletter]: variant === 'newsletter',
+          [s.label]: variant === 'label',
           [s.logo]: variant === 'logo',
         },
         className

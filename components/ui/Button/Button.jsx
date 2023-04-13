@@ -12,7 +12,7 @@ import LoadingDots from '../LoadingDots'
 const Button = forwardRef((props, buttonRef) => {
   const {
     className,
-    variant = 'flat',
+    variant = 'primary',
     children,
     active,
     width,
@@ -27,10 +27,9 @@ const Button = forwardRef((props, buttonRef) => {
   const rootClassName = cn(
     s.root,
     {
-      [s.ghost]: variant === 'ghost',
-      [s.slim]: variant === 'slim',
+      [s.primary]: variant === 'primary',
       [s.naked]: variant === 'naked',
-      [s.gradient]: variant === 'gradient',
+      [s.secondary]: variant === 'secondary',
       [s.loading]: loading,
       [s.disabled]: disabled,
     },

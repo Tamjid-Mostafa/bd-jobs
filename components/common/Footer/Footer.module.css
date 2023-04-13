@@ -1,0 +1,6 @@
+.root {
+  @apply border-t-2 border-blue;
+}
+.container {
+  @apply grid md:grid-cols-5 sm:grid-cols-2 grid-cols-1 gap-5 my-10;
+}

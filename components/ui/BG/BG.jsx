@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-const BG = ({src: image}) => {
+const BG = ({image}) => {
     return (
         <div
                 style={{
@@ -13,14 +13,12 @@ const BG = ({src: image}) => {
             >
                 <Image
                     src={image}
-                    placeholder="blur"
                     quality={100}
                     fill
                     sizes="100vw"
                     style={{
                         objectFit: 'cover',
                     }}
-                    blurDataURL={rgbDataURL(2, 129, 210)}
                     alt=""
                 />
             </div>

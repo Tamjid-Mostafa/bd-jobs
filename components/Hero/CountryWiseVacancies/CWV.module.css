@@ -1,0 +1,6 @@
+.root {
+@apply py-6 flex justify-end;
+  background-image: url("/banner.jpg");
+  background-repeat: no-repeat;
+  object-align: center;
+}

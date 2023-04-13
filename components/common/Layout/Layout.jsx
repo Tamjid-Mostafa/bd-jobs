@@ -23,7 +23,7 @@ const Layout = ({
         }
         </>
       )}
-      <main className="fit">{children}</main>
+      <main className="">{children}</main>
       {router.pathname !== '/404' && (
         <Footer />
       )}

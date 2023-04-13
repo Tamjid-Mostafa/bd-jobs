@@ -1,0 +1,15 @@
+
+.root {
+  @apply py-10 pr-5 pl-10 flex lg:justify-end ;
+  background-image: url("/banner.jpg");
+  background-repeat: no-repeat;
+  object-align: center;
+}
+
+.select {
+  @apply w-full rounded-lg border border-accent-3 bg-primary py-2 px-6 pr-10 text-accent-7 transition duration-150 ease-in-out;
+}
+
+.select:focus {
+  @apply shadow-outline-normal outline-none;
+}

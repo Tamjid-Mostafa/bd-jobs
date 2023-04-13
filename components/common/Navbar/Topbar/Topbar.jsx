@@ -9,7 +9,7 @@ const Topbar = ({ ...props }) => {
     return (
         <nav className="bg-gray-200 ">
             <Container>
-                <div className="max-w-screen-xl px-4 mx-auto flex justify-between items-center">
+                <div className="max-w-screen-xl mx-auto flex justify-between items-center">
                     <div className="flex items-center ">
                         <ul className="flex items-center flex-row font-medium mt-0 mr-6 space-x-8 text-sm">
                             {

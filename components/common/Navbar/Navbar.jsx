@@ -2,6 +2,7 @@ import DropDownArrow from "@components/icons/DropDownArrow";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { BsFillTelephoneFill } from 'react-icons/bs'
+import { FaBars } from 'react-icons/fa'
 import { IoDocumentTextSharp } from 'react-icons/io5'
 import { MdEditNote, MdExitToApp } from 'react-icons/md'
 import { HiOutlineDocumentMagnifyingGlass } from 'react-icons/hi2'
@@ -46,19 +47,23 @@ const Navbar = () => {
 
   return (
     <>
-      <Topbar navBarlinks={navBarlinks} />
+      <div className="lg:block hidden">
+        <Topbar navBarlinks={navBarlinks} />
+      </div>
       <nav className=" border-gray-200 ">
         <Container>
-          <div className="flex flex-wrap justify-between items-center">
-            <a href="https://bdesh.bdjobs.com/bn/defaultbn.asp" className="flex items-center">
-              <img src="/logo_bdesh.svg" className="h-8 mr-3" alt=" Logo" />
-            </a>
-            <div className="flex items-center order-1">
+          <div className="flex lg:flex-wrap lg:justify-between items-center py-2">
+            <div className="flex items-center justify-center lg:order-1 order-2 lg:w-auto w-full">
+              <a href="https://bdesh.bdjobs.com/bn/defaultbn.asp" >
+                <img src="/logo_bdesh.svg" className="h-8 mr-3" alt=" Logo" />
+              </a>
+            </div>
+            <div className="lg:flex hidden items-center order-1">
               <a href="https://bdesh.bdjobs.com/bn/defaultbn.asp" className="flex items-center">
                 <img src="/Joint_venture.png" className="h-8 mr-3" alt=" Logo" />
               </a>
             </div>
-            <div className="relative flex items-center order-1">
+            <div className="relative lg:flex hidden items-center order-1">
 
               <button className="font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center" type="button"
                 onClick={() => setDropDownOpen(!dropDownOpen)}
@@ -97,15 +102,20 @@ const Navbar = () => {
                 <span>Contact Us</span>
               </div>
             </div>
+            <button
+              className="lg:order-1 lg:hidden "
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              <FaBars />
+            </button>
           </div>
         </Container>
-        <div className="">
-        <MobileNav 
-        dropdownmenu={dropdownmenu}
-        navBarlinks={navBarlinks}
-  
-        />
-        </div>
+          <MobileNav
+            dropdownmenu={dropdownmenu}
+            navBarlinks={navBarlinks}
+            isMenuOpen={isMenuOpen}
+            setIsMenuOpen={setIsMenuOpen}
+          />
       </nav>
     </>
   );

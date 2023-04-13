@@ -15,6 +15,7 @@
   --red: #da3c3c;
   --purple: #f81ce5;
   --blue: #0070f3;
+  --yellow: #ff9800;
   --pink: #ff0080;
   --pink-light: #ff379c;
   --magenta: #eb367f;
@@ -86,6 +87,7 @@ body {
   position: relative;
   min-height: 100%;
   margin: 0;
+  transition: all 5s
 }
 
 a {
@@ -129,46 +131,56 @@ a {
     clip-path: inset(0.5px);
   }
 }
+.swiper-button-next,
 .swiper-button-prev {
-  left: 0 !important;
-  position: absolute;
-  bottom: 50%;
-  transform: translateY(50%);
-  padding: 10px !important;
-  background: url("/Expand Arrow.svg");
-  rotate: 180deg;
-  opacity: 0.9;
-  width: 10px;
-  height: 20%;
-}
-
-.swiper-button-next {
-  right: 0 !important;
-  position: absolute;
-  bottom: 50%;
-  transform: translateY(-50%);
-  padding: 10px !important;
-  background: url("/Expand Arrow.svg");
-  opacity: 0.9;
-  width: 10px;
-  height: 20%;
+  width: 10px !important;
+  height: 10px !important;
 }
 .swiper-button-next:after,
-.swiper-rtl .swiper-button-prev:after {
-  content: "" !important;
-}
-.swiper-button-prev:after,
-.swiper-rtl .swiper-button-next:after {
-  content: "" !important;
+.swiper-button-prev:after {
+  font-size: 24px !important;
+  color: #CAAD88 !important;
 }
 
-.swiper-pagination-bullet-active {
-  background: #fff !important;
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin :0;
+    margin-right: 20px !important;
 }
-
 .swiper-pagination-bullet {
-  border: 2px solid #ffffff;
-  background: # !important;
-  transition: background-color 0.5s ease;
-  opacity: "" !important;
+    width: 56px !important;
+    height: 5px !important;
+    border-radius: 10px !important;
+    margin-right: 20px !important;
+}
+.swiper-pagination-bullet-active {
+    background-color: #CAAD88 !important;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: var(--swiper-pagination-bottom, -1px) !important;
+}
+
+
+#scroll {
+    position: fixed;
+    right: 12px;
+    bottom: 12px;
+    cursor: pointer;
+    background-color: #424242;
+    display: none;
+    padding: 9px 12px;
+    border-radius: 6px;
+    z-index: 9999;
+    transition: all 0.3s linear 0s;
+}
+#scroll .back-top {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
 }
